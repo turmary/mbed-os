@@ -16,6 +16,7 @@
  */
 #include "drivers/Serial.h"
 #include "platform/mbed_wait_api.h"
+#include "rtx_lib.h"
 
 #if DEVICE_SERIAL
 
@@ -43,11 +44,17 @@ int Serial::_putc(int c)
 
 void Serial::lock()
 {
+    if (IsIrqMode() || IsIrqMasked()) {
+        return;
+    }
     _mutex.lock();
 }
 
 void Serial::unlock()
 {
+    if (IsIrqMode() || IsIrqMasked()) {
+        return;
+    }
     _mutex.unlock();
 }
 

@@ -15,6 +15,7 @@
  * limitations under the License.
  */
 #include "drivers/CAN.h"
+#include "rtx_lib.h"
 
 #if DEVICE_CAN
 
@@ -159,11 +160,17 @@ void CAN::_irq_handler(uint32_t id, CanIrqType type)
 
 void CAN::lock()
 {
+    if (IsIrqMode() || IsIrqMasked()) {
+        return;
+    }
     _mutex.lock();
 }
 
 void CAN::unlock()
 {
+    if (IsIrqMode() || IsIrqMasked()) {
+        return;
+    }
     _mutex.unlock();
 }
 
