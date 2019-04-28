@@ -2,8 +2,8 @@
 /* 0xEC reserved for vectors; 8-byte aligned = 0xF0 */
 MEMORY
 { 
-  FLASH (rx) : ORIGIN = 0x08000000, LENGTH = 128K
-  RAM (rwx) : ORIGIN = 0x200000F0, LENGTH = 20K - (0xEC+0x4)
+  FLASH (rx) : ORIGIN = 0x08000000, LENGTH = 256K
+  RAM (rwx)  : ORIGIN = 0x200000F0, LENGTH = 64K - (0xEC+0x4)
 }
 
 /* Linker script to place sections and symbol values. Should be used together

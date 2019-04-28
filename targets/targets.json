@@ -2168,7 +2168,7 @@
         "inherits": ["FAMILY_STM32"],
         "supported_form_factors": ["ARDUINO", "MORPHO"],
         "core": "Cortex-M3",
-        "extra_labels_add": ["STM32F1", "STM32F103RB"],
+        "extra_labels_add": ["STM32F1", "STM32F107VC"],
         "config": {
             "clock_source": {
                 "help": "Mask value : USE_PLL_HSE_EXTC (SYSCLK=72 MHz) | USE_PLL_HSE_XTAL (need HW patch) | USE_PLL_HSI (SYSCLK=64 MHz)",
@@ -2189,7 +2189,7 @@
         ],
         "device_has_remove": ["LPTICKER"],
         "release_versions": ["2", "5"],
-        "device_name": "STM32F103RB"
+        "device_name": "STM32F107VC"
     },
     "NUCLEO_F207ZG": {
         "inherits": ["FAMILY_STM32"],
