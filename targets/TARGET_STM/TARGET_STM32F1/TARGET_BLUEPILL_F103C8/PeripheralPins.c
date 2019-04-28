@@ -205,12 +205,12 @@ MBED_WEAK const PinMap PinMap_SPI_SSEL[] = {
 
 MBED_WEAK const PinMap PinMap_CAN_RD[] = {
     {PA_11,      CAN_1, STM_PIN_DATA(STM_MODE_INPUT, GPIO_NOPULL, 0)},
-    {PB_8,       CAN_1, STM_PIN_DATA(STM_MODE_INPUT, GPIO_NOPULL, 10)},
+    {PB_8,       CAN_1, STM_PIN_DATA(STM_MODE_INPUT, GPIO_NOPULL, 11)},
     {NC, NC, 0}
 };
 
 MBED_WEAK const PinMap PinMap_CAN_TD[] = {
     {PA_12,      CAN_1, STM_PIN_DATA(STM_MODE_AF_PP, GPIO_NOPULL, 0)},
-    {PB_9,       CAN_1, STM_PIN_DATA(STM_MODE_AF_PP, GPIO_NOPULL, 10)},
+    {PB_9,       CAN_1, STM_PIN_DATA(STM_MODE_AF_PP, GPIO_NOPULL, 11)},
     {NC, NC, 0}
 };

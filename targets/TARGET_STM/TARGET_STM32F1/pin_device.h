@@ -86,8 +86,14 @@ static inline void stm_pin_SetAFPin(GPIO_TypeDef *gpio, PinName pin, uint32_t af
                 __HAL_AFIO_REMAP_TIM3_ENABLE();
                 break;
 #if defined(AFIO_MAPR_CAN_REMAP_REMAP1)
-            case 10: // CAN_RX mapped to PB8, CAN_TX mapped to PB9
+            case 10: // CAN_RX mapped to PA11, CAN_TX mapped to PA12
+                __HAL_AFIO_REMAP_CAN1_1();
+                break;
+            case 11: // CAN_RX mapped to PB8, CAN_TX mapped to PB9
                 __HAL_AFIO_REMAP_CAN1_2();
+                break;
+            case 12: // CAN_RX mapped to PD0, CAN_TX mapped to PD1
+                __HAL_AFIO_REMAP_CAN1_3();
                 break;
 #endif
             default:
